@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geoclime"
+version = "0.1.0"
+description = "One region and time-series API for climate, ocean and glaciology datasets."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+dependencies = ["pandas>=2.0", "numpy>=1.24", "matplotlib>=3.7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+geoclime = ["data/*.csv"]
