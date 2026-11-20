@@ -1,15 +1,13 @@
 # geoclime
 
-![CI](https://github.com/31shruti/geoclime/actions/workflows/ci.yml/badge.svg)
+[![CI](https://github.com/31shruti/Geoclime/actions/workflows/ci.yml/badge.svg)](https://github.com/31shruti/Geoclime/actions/workflows/ci.yml)
 
-One consistent **region + time-series API** for climate, ocean and glaciology data.
-Instead of writing different loading and cleaning code for every dataset, you call
-`geoclime.load(...)` and always get the same `TimeSeries` object back.
+One consistent region + time-series API for climate, ocean and glaciology data. Instead of writing different loading and cleaning code for every dataset, you call `geoclime.load(...)` and always get the same `TimeSeries` object back.
 
 ## Install
 
-```bash
-pip install git+https://github.com/31shruti/geoclime.git
+```
+pip install git+https://github.com/31shruti/Geoclime.git
 ```
 
 ## Quick start
@@ -31,7 +29,7 @@ gc.correlation(temp, gc.load("co2"), differenced=True)  # year-to-year changes
 
 Command line:
 
-```bash
+```
 python -m geoclime list
 python -m geoclime show sea_level --start 1990
 ```
@@ -40,11 +38,11 @@ python -m geoclime show sea_level --start 1990
 
 | Name | Domain | Unit | Source |
 |---|---|---|---|
-| `temperature` | climate | °C anomaly | NASA GISTEMP via [datahub.io](https://datahub.io/core/global-temp) (CC-BY-4.0) |
-| `co2` | climate | ppm | NOAA Mauna Loa via [datahub.io](https://datahub.io/core/co2-ppm) (ODC-PDDL) |
-| `sea_level` | ocean | cm | CSIRO via EPA, [datahub.io](https://datahub.io/core/sea-level-rise) (ODC-PDDL) |
-| `glacier_mass_balance` | glaciology | m w.e. | EPA, [datahub.io](https://datahub.io/core/glacier-mass-balance) (ODC-PDDL) |
-|`co2_global`| climate| ppm | NOAA global marine average|
+| temperature | climate | °C anomaly | NASA GISTEMP via [datahub.io](https://datahub.io/core/global-temp) (CC-BY-4.0) |
+| co2 | climate | ppm | NOAA Mauna Loa via [datahub.io](https://datahub.io/core/co2-ppm) (ODC-PDDL) |
+| co2_global | climate | ppm | NOAA global marine average via [datahub.io](https://datahub.io/core/co2-ppm) (ODC-PDDL) |
+| sea_level | ocean | cm | CSIRO via EPA, [datahub.io](https://datahub.io/core/sea-level-rise) (ODC-PDDL) |
+| glacier_mass_balance | glaciology | m w.e. | EPA, [datahub.io](https://datahub.io/core/glacier-mass-balance) (ODC-PDDL) |
 
 ## What it can do today (v0.1)
 
@@ -54,13 +52,12 @@ python -m geoclime show sea_level --start 1990
 
 ## Limits (MVP)
 
-- All bundled datasets are global annual series, so only `region="global"` works.
-  The `Region` class (with a bounding box) is where gridded and regional data will plug in.
+- All bundled datasets are global annual series, so only `region="global"` works. The `Region` class (with a bounding box) is where gridded and regional data will plug in.
 - Annual resolution only.
 
 ## Develop
 
-```bash
+```
 pip install -e ".[dev]"
 python -m pytest
 ```
