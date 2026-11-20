@@ -1,6 +1,6 @@
 # geoclime
 
-![CI](https://github.com/YOUR-USERNAME/geoclime/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/31shruti/geoclime/actions/workflows/ci.yml/badge.svg)
 
 One consistent **region + time-series API** for climate, ocean and glaciology data.
 Instead of writing different loading and cleaning code for every dataset, you call
@@ -9,7 +9,7 @@ Instead of writing different loading and cleaning code for every dataset, you ca
 ## Install
 
 ```bash
-pip install git+https://github.com/YOUR-USERNAME/geoclime.git
+pip install git+https://github.com/31shruti/geoclime.git
 ```
 
 ## Quick start
